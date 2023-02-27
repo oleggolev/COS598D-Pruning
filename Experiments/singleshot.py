@@ -7,6 +7,7 @@ from Utils import generator
 from Utils import metrics
 from train import *
 from prune import *
+import timeit
 
 def run(args):
     ## Random Seed and Device ##
@@ -47,9 +48,10 @@ def run(args):
     
     ## Post-Train ##
     print('Post-Training for {} epochs.'.format(args.post_epochs))
+    start = timeit.default_timer()
     post_result = train_eval_loop(model, loss, optimizer, scheduler, train_loader, 
                                   test_loader, device, args.post_epochs, args.verbose) 
-
+    stop = timeit.default_timer()
     ## Display Results ##
     frames = [pre_result.head(1), pre_result.tail(1), post_result.head(1), post_result.tail(1)]
     train_result = pd.concat(frames, keys=['Init.', 'Pre-Prune', 'Post-Prune', 'Final'])
@@ -65,7 +67,7 @@ def run(args):
     print("Prune results:\n", prune_result)
     print("Parameter Sparsity: {}/{} ({:.4f})".format(total_params, possible_params, total_params / possible_params))
     print("FLOP Sparsity: {}/{} ({:.4f})".format(total_flops, possible_flops, total_flops / possible_flops))
-
+    print('Time: ', stop - start)
     ## Save Results and Model ##
     if args.save:
         print('Saving results.')
@@ -75,5 +77,8 @@ def run(args):
         torch.save(model.state_dict(),"{}/model.pt".format(args.result_dir))
         torch.save(optimizer.state_dict(),"{}/optimizer.pt".format(args.result_dir))
         torch.save(scheduler.state_dict(),"{}/scheduler.pt".format(args.result_dir))
+        time_file = open(args.result_dir + "\telapsed.txt", "w")
+        time_file.write(str(stop - start))
+        time_file.close()
 
 
