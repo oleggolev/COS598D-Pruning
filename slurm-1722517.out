@@ -65,4 +65,50 @@ Pre-Train for 0 epochs.
 Pruning with rand for 1 epochs.
   0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.92it/s]100%|██████████| 1/1 [00:00<00:00,  5.91it/s]Post-Training for 10 epochs.
 
+<<<<<<< Updated upstream
   0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.25s/it] 20%|██        | 2/10 [00:18<01:14,  9.26s/it] 30%|███       | 3/10 [00:27<01:04,  9.27s/it] 40%|████      | 4/10 [00:37<00:55,  9.27s/it] 50%|█████     | 5/10 [00:46<00:46,  9.25s/it] 60%|██████    | 6/10 [00:55<00:37,  9.27s/it]
+=======
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.25s/it] 20%|██        | 2/10 [00:18<01:14,  9.26s/it] 30%|███       | 3/10 [00:27<01:04,  9.27s/it] 40%|████      | 4/10 [00:37<00:55,  9.27s/it] 50%|█████     | 5/10 [00:46<00:46,  9.25s/it] 60%|██████    | 6/10 [00:55<00:37,  9.27s/it] 70%|███████   | 7/10 [01:04<00:27,  9.28s/it] 80%|████████  | 8/10 [01:14<00:18,  9.28s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.29s/it]100%|██████████| 10/10 [01:32<00:00,  9.31s/it]100%|██████████| 10/10 [01:32<00:00,  9.28s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302585          10.04          49.65
+Final      10    2.302675   2.302590          10.00          50.00
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   1.392548e+03      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.936300e+04      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   5.876383e+04      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   1.175173e+05      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.348988e+05      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   4.714861e+05      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   4.697657e+05      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   9.408655e+05      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   1.881480e+06      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   1.883604e+06      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   1.883816e+06      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   1.882481e+06      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   1.882456e+06      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   4.099733e+03      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475793/14719818 (0.1003)
+FLOP Sparsity: 31597941/313478154 (0.1008)
+Time:  93.5064437519759
+Saving results.
+>>>>>>> Stashed changes

@@ -1,0 +1,2010 @@
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.38it/s]100%|██████████| 1/1 [00:00<00:00,  3.38it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.29s/it] 20%|██        | 2/10 [00:18<01:14,  9.27s/it] 30%|███       | 3/10 [00:27<01:04,  9.27s/it] 40%|████      | 4/10 [00:37<00:55,  9.28s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.30s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.30s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.30s/it]100%|██████████| 10/10 [01:32<00:00,  9.30s/it]100%|██████████| 10/10 [01:32<00:00,  9.29s/it]
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:205: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:216: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(x, axis, dtype, out, keepdims)
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302601          10.00          49.95
+Final      10    0.516217   0.583717          79.66          98.81
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   2.945027e+22      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.945027e+22      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   2.945027e+22      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   2.945027e+22      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.945027e+22      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   2.945027e+22      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   2.945027e+22      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   2.945027e+22      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   2.945026e+22      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   2.945027e+22      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   2.945026e+22      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   2.945026e+22      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   2.945028e+22      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   2.945027e+22      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475792/14719818 (0.1003)
+FLOP Sparsity: 143301021/313478154 (0.4571)
+Time:  93.61000793334097
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.90it/s]100%|██████████| 1/1 [00:00<00:00,  5.90it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.30s/it] 20%|██        | 2/10 [00:18<01:14,  9.30s/it] 30%|███       | 3/10 [00:27<01:05,  9.31s/it] 40%|████      | 4/10 [00:37<00:55,  9.31s/it] 50%|█████     | 5/10 [00:46<00:46,  9.31s/it] 60%|██████    | 6/10 [00:55<00:37,  9.31s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.30s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.30s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302585          10.04          49.65
+Final      10    2.302675   2.302590          10.00          50.00
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   1.392548e+03      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.936300e+04      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   5.876383e+04      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   1.175173e+05      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.348988e+05      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   4.714861e+05      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   4.697657e+05      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   9.408655e+05      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   1.881480e+06      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   1.883604e+06      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   1.883816e+06      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   1.882481e+06      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   1.882456e+06      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   4.099733e+03      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475793/14719818 (0.1003)
+FLOP Sparsity: 31597941/313478154 (0.1008)
+Time:  93.7222110433504
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.23it/s]100%|██████████| 1/1 [00:00<00:00,  6.23it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.30s/it] 20%|██        | 2/10 [00:18<01:14,  9.30s/it] 30%|███       | 3/10 [00:27<01:05,  9.32s/it] 40%|████      | 4/10 [00:37<00:55,  9.31s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.29s/it] 70%|███████   | 7/10 [01:05<00:27,  9.31s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.32s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.303128          11.55          49.51
+Final      10     0.58422   0.577010          79.98          98.77
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...     373.968018      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...    1730.575928      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...    3463.390137      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...    4910.584961      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...    9810.975586      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...   13856.869141      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...   13853.344727      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...   27728.505859      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...   39216.730469      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...   39200.449219      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...   39235.941406      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...   39234.457031      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...   39220.398438      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...     250.940384      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475793/14719818 (0.1003)
+FLOP Sparsity: 76875004/313478154 (0.2452)
+Time:  93.81317783147097
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.37it/s]100%|██████████| 1/1 [00:00<00:00,  3.36it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.31s/it] 20%|██        | 2/10 [00:18<01:14,  9.32s/it] 30%|███       | 3/10 [00:27<01:05,  9.32s/it] 40%|████      | 4/10 [00:37<00:55,  9.30s/it] 50%|█████     | 5/10 [00:46<00:46,  9.31s/it] 60%|██████    | 6/10 [00:55<00:37,  9.31s/it] 70%|███████   | 7/10 [01:05<00:27,  9.31s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.29s/it]100%|██████████| 10/10 [01:33<00:00,  9.30s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.321671           9.71          50.37
+Final      10    0.640305   0.669400          76.55          98.28
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.003713      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.016121      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       0.022291      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       0.026563      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       0.042247      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       0.052948      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       0.056506      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       0.100780      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       0.133787      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       0.133901      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       0.149699      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       0.122998      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       0.125983      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.012463      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475792/14719818 (0.1003)
+FLOP Sparsity: 63876719/313478154 (0.2038)
+Time:  93.73550995998085
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.25s/it] 20%|██        | 2/10 [00:18<01:14,  9.28s/it] 30%|███       | 3/10 [00:27<01:05,  9.30s/it] 40%|████      | 4/10 [00:37<00:55,  9.30s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.30s/it] 70%|███████   | 7/10 [01:05<00:27,  9.29s/it] 80%|████████  | 8/10 [01:14<00:18,  9.30s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.30s/it]100%|██████████| 10/10 [01:32<00:00,  9.30s/it]100%|██████████| 10/10 [01:32<00:00,  9.30s/it]
+Train results:
+                 train_loss     test_loss  top1_accuracy  top5_accuracy
+Init.      0           NaN  2.417717e+00          11.73          50.17
+Pre-Prune  0           NaN  2.417717e+00          11.73          50.17
+Post-Prune 0           NaN  7.880240e+09          10.00          50.00
+Final      10  3070.360546  1.851133e+03          12.69          53.03
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.265792      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.929338      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       1.172928      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       1.148655      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       1.441170      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       1.451824      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       1.240989      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       1.681742      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       1.881857      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       1.871122      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       1.870971      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       1.876320      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       2.130060      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.186161      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475792/14719818 (0.1003)
+FLOP Sparsity: 55155144/313478154 (0.1759)
+Time:  93.64404809568077
+Saving results.
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  8.05it/s]100%|██████████| 1/1 [00:00<00:00,  8.03it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:22,  2.45s/it] 20%|██        | 2/10 [00:04<00:19,  2.47s/it] 30%|███       | 3/10 [00:07<00:17,  2.46s/it] 40%|████      | 4/10 [00:09<00:14,  2.49s/it] 50%|█████     | 5/10 [00:12<00:12,  2.49s/it] 60%|██████    | 6/10 [00:14<00:09,  2.48s/it] 70%|███████   | 7/10 [00:17<00:07,  2.48s/it] 80%|████████  | 8/10 [00:19<00:04,  2.49s/it] 90%|█████████ | 9/10 [00:22<00:02,  2.48s/it]100%|██████████| 10/10 [00:24<00:00,  2.48s/it]100%|██████████| 10/10 [00:24<00:00,  2.48s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.306855          10.32          47.39
+Pre-Prune  0          NaN   2.306855          10.32          47.39
+Post-Prune 0          NaN   2.306644          10.32          49.80
+Final      10    2.301366   2.301025          11.35          52.14
+Prune results:
+    module   param  sparsity  ...  score abs variance score abs sum  prunable
+0       1  weight    0.0000  ...            9.872968  421432.43750      True
+1       1    bias    1.0000  ...            0.000000       0.00000     False
+2       3  weight    0.2801  ...          606.436279  421973.71875      True
+3       3    bias    1.0000  ...            0.000000       0.00000     False
+4       5  weight    0.2774  ...          605.871521  422284.00000      True
+5       5    bias    1.0000  ...            0.000000       0.00000     False
+6       7  weight    0.2796  ...          616.338745  422344.31250      True
+7       7    bias    1.0000  ...            0.000000       0.00000     False
+8       9  weight    0.2638  ...          690.546692  422357.25000      True
+9       9    bias    1.0000  ...            0.000000       0.00000     False
+10     11  weight    0.9310  ...        62346.089844  422359.25000      True
+11     11    bias    1.0000  ...            0.000000       0.00000     False
+
+[12 rows x 13 columns]
+Parameter Sparsity: 12449/119910 (0.1038)
+FLOP Sparsity: 12449/119910 (0.1038)
+Time:  25.208278455771506
+Saving results.
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 463.61it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:22,  2.49s/it] 20%|██        | 2/10 [00:04<00:19,  2.49s/it] 30%|███       | 3/10 [00:07<00:17,  2.45s/it] 40%|████      | 4/10 [00:09<00:14,  2.44s/it] 50%|█████     | 5/10 [00:12<00:12,  2.45s/it] 60%|██████    | 6/10 [00:14<00:09,  2.46s/it] 70%|███████   | 7/10 [00:17<00:07,  2.44s/it] 80%|████████  | 8/10 [00:19<00:04,  2.45s/it] 90%|█████████ | 9/10 [00:22<00:02,  2.46s/it]100%|██████████| 10/10 [00:24<00:00,  2.45s/it]100%|██████████| 10/10 [00:24<00:00,  2.45s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.306855          10.32          47.39
+Pre-Prune  0          NaN   2.306855          10.32          47.39
+Post-Prune 0          NaN   2.305041          10.32          49.26
+Final      10    0.193536   0.195471          94.11          99.73
+Prune results:
+    module   param  sparsity  ...  score abs variance score abs sum  prunable
+0       1  weight  0.100587  ...            0.364183  62539.339844      True
+1       1    bias  1.000000  ...            0.000000      0.000000     False
+2       3  weight  0.098500  ...            0.367775   7920.516602      True
+3       3    bias  1.000000  ...            0.000000      0.000000     False
+4       5  weight  0.100200  ...            0.352073   7896.190430      True
+5       5    bias  1.000000  ...            0.000000      0.000000     False
+6       7  weight  0.098300  ...            0.361521   7916.939453      True
+7       7    bias  1.000000  ...            0.000000      0.000000     False
+8       9  weight  0.097900  ...            0.354341   7925.648438      True
+9       9    bias  1.000000  ...            0.000000      0.000000     False
+10     11  weight  0.105000  ...            0.353799    826.184204      True
+11     11    bias  1.000000  ...            0.000000      0.000000     False
+
+[12 rows x 13 columns]
+Parameter Sparsity: 12450/119910 (0.1038)
+FLOP Sparsity: 12450/119910 (0.1038)
+Time:  24.9680314110592
+Saving results.
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 409.04it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:21,  2.44s/it] 20%|██        | 2/10 [00:04<00:19,  2.44s/it] 30%|███       | 3/10 [00:07<00:17,  2.44s/it] 40%|████      | 4/10 [00:09<00:14,  2.46s/it] 50%|█████     | 5/10 [00:12<00:12,  2.45s/it] 60%|██████    | 6/10 [00:14<00:09,  2.45s/it] 70%|███████   | 7/10 [00:17<00:07,  2.45s/it] 80%|████████  | 8/10 [00:19<00:04,  2.44s/it] 90%|█████████ | 9/10 [00:22<00:02,  2.44s/it]100%|██████████| 10/10 [00:24<00:00,  2.44s/it]100%|██████████| 10/10 [00:24<00:00,  2.44s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.306855          10.32          47.39
+Pre-Prune  0          NaN   2.306855          10.32          47.39
+Post-Prune 0          NaN   2.306222          10.32          49.80
+Final      10    2.301311   2.301112          11.35          51.63
+Prune results:
+    module   param  sparsity  ...  score abs variance score abs sum  prunable
+0       1  weight    0.0000  ...            0.000107   1395.579224      True
+1       1    bias    1.0000  ...            0.000000      0.000000     False
+2       3  weight    0.2911  ...            0.000839    499.683289      True
+3       3    bias    1.0000  ...            0.000000      0.000000     False
+4       5  weight    0.2895  ...            0.000824    498.329956      True
+5       5    bias    1.0000  ...            0.000000      0.000000     False
+6       7  weight    0.2872  ...            0.000828    496.741730      True
+7       7    bias    1.0000  ...            0.000000      0.000000     False
+8       9  weight    0.2974  ...            0.000836    501.181396      True
+9       9    bias    1.0000  ...            0.000000      0.000000     False
+10     11  weight    0.2880  ...            0.000822     48.696388      True
+11     11    bias    1.0000  ...            0.000000      0.000000     False
+
+[12 rows x 13 columns]
+Parameter Sparsity: 12449/119910 (0.1038)
+FLOP Sparsity: 12449/119910 (0.1038)
+Time:  24.890468361787498
+Saving results.
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  8.00it/s]100%|██████████| 1/1 [00:00<00:00,  7.98it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:21,  2.42s/it] 20%|██        | 2/10 [00:04<00:19,  2.43s/it] 30%|███       | 3/10 [00:07<00:16,  2.41s/it] 40%|████      | 4/10 [00:09<00:14,  2.41s/it] 50%|█████     | 5/10 [00:12<00:12,  2.42s/it] 60%|██████    | 6/10 [00:14<00:09,  2.43s/it] 70%|███████   | 7/10 [00:17<00:07,  2.44s/it] 80%|████████  | 8/10 [00:19<00:04,  2.44s/it] 90%|█████████ | 9/10 [00:21<00:02,  2.44s/it]100%|██████████| 10/10 [00:24<00:00,  2.44s/it]100%|██████████| 10/10 [00:24<00:00,  2.43s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.306855          10.32          47.39
+Pre-Prune  0          NaN   2.306855          10.32          47.39
+Post-Prune 0          NaN   2.306854          10.32          49.80
+Final      10    0.129924   0.137349          95.67          99.82
+Prune results:
+    module   param  sparsity  ...  score abs variance score abs sum  prunable
+0       1  weight  0.054056  ...        5.989315e-11      0.404448      True
+1       1    bias  1.000000  ...        0.000000e+00      0.000000     False
+2       3  weight  0.218900  ...        4.284688e-10      0.125934      True
+3       3    bias  1.000000  ...        0.000000e+00      0.000000     False
+4       5  weight  0.181800  ...        4.830765e-10      0.111812      True
+5       5    bias  1.000000  ...        0.000000e+00      0.000000     False
+6       7  weight  0.151100  ...        6.846700e-10      0.103630      True
+7       7    bias  1.000000  ...        0.000000e+00      0.000000     False
+8       9  weight  0.176600  ...        2.011727e-09      0.158670      True
+9       9    bias  1.000000  ...        0.000000e+00      0.000000     False
+10     11  weight  0.418000  ...        5.414625e-08      0.095505      True
+11     11    bias  1.000000  ...        0.000000e+00      0.000000     False
+
+[12 rows x 13 columns]
+Parameter Sparsity: 12449/119910 (0.1038)
+FLOP Sparsity: 12449/119910 (0.1038)
+Time:  24.73905150499195
+Saving results.
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.91it/s]100%|██████████| 1/1 [00:00<00:00,  3.90it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:21,  2.44s/it] 20%|██        | 2/10 [00:04<00:19,  2.47s/it] 30%|███       | 3/10 [00:07<00:17,  2.45s/it] 40%|████      | 4/10 [00:09<00:14,  2.45s/it] 50%|█████     | 5/10 [00:12<00:12,  2.46s/it] 60%|██████    | 6/10 [00:14<00:09,  2.46s/it] 70%|███████   | 7/10 [00:17<00:07,  2.47s/it] 80%|████████  | 8/10 [00:19<00:04,  2.46s/it] 90%|█████████ | 9/10 [00:22<00:02,  2.47s/it]100%|██████████| 10/10 [00:24<00:00,  2.48s/it]100%|██████████| 10/10 [00:24<00:00,  2.47s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.306855          10.32          47.39
+Pre-Prune  0          NaN   2.306855          10.32          47.39
+Post-Prune 0          NaN   2.387675          10.08          49.31
+Final      10    0.163503   0.167285          95.09          99.75
+Prune results:
+    module   param  sparsity  ...  score abs variance score abs sum  prunable
+0       1  weight  0.051645  ...        4.010847e-10      0.980858      True
+1       1    bias  1.000000  ...        0.000000e+00      0.000000     False
+2       3  weight  0.216500  ...        7.668780e-09      0.450646      True
+3       3    bias  1.000000  ...        0.000000e+00      0.000000     False
+4       5  weight  0.206200  ...        1.109023e-08      0.519234      True
+5       5    bias  1.000000  ...        0.000000e+00      0.000000     False
+6       7  weight  0.176400  ...        2.182158e-08      0.607798      True
+7       7    bias  1.000000  ...        0.000000e+00      0.000000     False
+8       9  weight  0.156500  ...        3.037865e-08      0.663623      True
+9       9    bias  1.000000  ...        0.000000e+00      0.000000     False
+10     11  weight  0.335000  ...        3.629367e-07      0.315077      True
+11     11    bias  1.000000  ...        0.000000e+00      0.000000     False
+
+[12 rows x 13 columns]
+Parameter Sparsity: 12450/119910 (0.1038)
+FLOP Sparsity: 12450/119910 (0.1038)
+Time:  25.12277726829052
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.43it/s]100%|██████████| 1/1 [00:00<00:00,  3.42it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.31s/it] 20%|██        | 2/10 [00:18<01:14,  9.28s/it] 30%|███       | 3/10 [00:27<01:05,  9.29s/it] 40%|████      | 4/10 [00:37<00:55,  9.28s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.31s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.30s/it]100%|██████████| 10/10 [01:32<00:00,  9.30s/it]100%|██████████| 10/10 [01:32<00:00,  9.30s/it]
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:205: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:216: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(x, axis, dtype, out, keepdims)
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.414332          11.66          50.38
+Final      10    0.583694   0.607409          79.59          98.61
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   2.945027e+22      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.945027e+22      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   2.945027e+22      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   2.945027e+22      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.945027e+22      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   2.945027e+22      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   2.945027e+22      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   2.945027e+22      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   2.945026e+22      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   2.945027e+22      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   2.945026e+22      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   2.945026e+22      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   2.945028e+22      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   2.945027e+22      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 13119512/14719818 (0.8913)
+FLOP Sparsity: 297416253/313478154 (0.9488)
+Time:  93.66603692341596
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.72it/s]100%|██████████| 1/1 [00:00<00:00,  5.72it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.26s/it] 20%|██        | 2/10 [00:18<01:14,  9.26s/it] 30%|███       | 3/10 [00:27<01:05,  9.29s/it] 40%|████      | 4/10 [00:37<00:55,  9.29s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.30s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.31s/it]100%|██████████| 10/10 [01:32<00:00,  9.31s/it]100%|██████████| 10/10 [01:32<00:00,  9.30s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.337658          10.00          50.00
+Final      10    0.587854   0.614602          79.51          98.35
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   1.392548e+03      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.936300e+04      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   5.876383e+04      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   1.175173e+05      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.348988e+05      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   4.714861e+05      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   4.697657e+05      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   9.408655e+05      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   1.881480e+06      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   1.883604e+06      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   1.883816e+06      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   1.882481e+06      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   1.882456e+06      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   4.099733e+03      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 13119512/14719818 (0.8913)
+FLOP Sparsity: 279470936/313478154 (0.8915)
+Time:  93.6731414431706
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.86it/s]100%|██████████| 1/1 [00:00<00:00,  5.86it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.28s/it] 20%|██        | 2/10 [00:18<01:14,  9.28s/it] 30%|███       | 3/10 [00:27<01:04,  9.29s/it] 40%|████      | 4/10 [00:37<00:55,  9.30s/it] 50%|█████     | 5/10 [00:46<00:46,  9.32s/it] 60%|██████    | 6/10 [00:55<00:37,  9.32s/it] 70%|███████   | 7/10 [01:05<00:27,  9.31s/it] 80%|████████  | 8/10 [01:14<00:18,  9.30s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.30s/it]100%|██████████| 10/10 [01:33<00:00,  9.29s/it]100%|██████████| 10/10 [01:33<00:00,  9.30s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.416506          11.96          50.11
+Final      10    0.613014   0.633112          78.69          98.43
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...     373.968018      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...    1730.575928      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...    3463.390137      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...    4910.584961      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...    9810.975586      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...   13856.869141      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...   13853.344727      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...   27728.505859      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...   39216.730469      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...   39200.449219      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...   39235.941406      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...   39234.457031      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...   39220.398438      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...     250.940384      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 13119512/14719818 (0.8913)
+FLOP Sparsity: 287903951/313478154 (0.9184)
+Time:  93.65553728677332
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.34it/s]100%|██████████| 1/1 [00:00<00:00,  3.34it/s]
+ERROR: 12249879.0 prunable parameters remaining, expected 13115278.045185937
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.26it/s]100%|██████████| 1/1 [00:00<00:00,  1.25it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:24,  9.33s/it] 20%|██        | 2/10 [00:18<01:14,  9.32s/it] 30%|███       | 3/10 [00:27<01:05,  9.30s/it] 40%|████      | 4/10 [00:37<00:55,  9.31s/it] 50%|█████     | 5/10 [00:46<00:46,  9.31s/it] 60%|██████    | 6/10 [00:55<00:37,  9.31s/it] 70%|███████   | 7/10 [01:05<00:27,  9.31s/it] 80%|████████  | 8/10 [01:14<00:18,  9.30s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]
+Train results:
+                train_loss     test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN  2.417717e+00          11.73          50.17
+Pre-Prune  0          NaN  2.417717e+00          11.73          50.17
+Post-Prune 0          NaN  1.027242e+10          10.00          50.00
+Final      10    2.043003  1.989675e+00          30.20          79.48
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.265792      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.929338      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       1.172928      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       1.148655      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       1.441170      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       1.451824      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       1.240989      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       1.681742      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       1.881857      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       1.871122      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       1.870971      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       1.876319      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       2.130060      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.186161      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 13119513/14719818 (0.8913)
+FLOP Sparsity: 256736085/313478154 (0.8190)
+Time:  93.77556862030178
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.43it/s]100%|██████████| 1/1 [00:00<00:00,  3.43it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.28s/it] 20%|██        | 2/10 [00:18<01:14,  9.31s/it] 30%|███       | 3/10 [00:27<01:05,  9.30s/it] 40%|████      | 4/10 [00:37<00:55,  9.30s/it] 50%|█████     | 5/10 [00:46<00:46,  9.31s/it] 60%|██████    | 6/10 [00:55<00:37,  9.30s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.32s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.32s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:205: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:216: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(x, axis, dtype, out, keepdims)
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.403514          11.46          49.92
+Final      10    0.595604   0.621002          79.47          98.31
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   2.945027e+22      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.945027e+22      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   2.945027e+22      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   2.945027e+22      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.945027e+22      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   2.945027e+22      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   2.945027e+22      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   2.945027e+22      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   2.945026e+22      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   2.945027e+22      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   2.945026e+22      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   2.945026e+22      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   2.945028e+22      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   2.945027e+22      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 11693237/14719818 (0.7944)
+FLOP Sparsity: 282939167/313478154 (0.9026)
+Time:  93.79779768083245
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.72it/s]100%|██████████| 1/1 [00:00<00:00,  5.71it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.26s/it] 20%|██        | 2/10 [00:18<01:14,  9.27s/it] 30%|███       | 3/10 [00:27<01:04,  9.28s/it] 40%|████      | 4/10 [00:37<00:55,  9.29s/it] 50%|█████     | 5/10 [00:46<00:46,  9.29s/it] 60%|██████    | 6/10 [00:55<00:37,  9.29s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.30s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.29s/it]100%|██████████| 10/10 [01:32<00:00,  9.28s/it]100%|██████████| 10/10 [01:32<00:00,  9.29s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.307499          10.13          48.79
+Final      10    0.589875   0.637111          78.48          98.44
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   1.392548e+03      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.936300e+04      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   5.876383e+04      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   1.175173e+05      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.348988e+05      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   4.714861e+05      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   4.697657e+05      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   9.408655e+05      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   1.881480e+06      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   1.883604e+06      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   1.883816e+06      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   1.882481e+06      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   1.882456e+06      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   4.099733e+03      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 11693238/14719818 (0.7944)
+FLOP Sparsity: 249063429/313478154 (0.7945)
+Time:  93.55432411376387
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.92it/s]100%|██████████| 1/1 [00:00<00:00,  5.92it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.30s/it] 20%|██        | 2/10 [00:18<01:14,  9.29s/it] 30%|███       | 3/10 [00:27<01:04,  9.28s/it] 40%|████      | 4/10 [00:37<00:55,  9.30s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.29s/it] 70%|███████   | 7/10 [01:05<00:27,  9.31s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.32s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.413360           9.73          50.08
+Final      10    0.606278   0.603925          79.50          98.57
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...     373.968018      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...    1730.575928      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...    3463.390137      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...    4910.584961      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...    9810.975586      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...   13856.869141      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...   13853.344727      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...   27728.505859      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...   39216.730469      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...   39200.449219      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...   39235.941406      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...   39234.457031      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...   39220.398438      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...     250.940384      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 11693236/14719818 (0.7944)
+FLOP Sparsity: 264914296/313478154 (0.8451)
+Time:  93.79221299570054
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.57it/s]100%|██████████| 1/1 [00:00<00:00,  3.57it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.30s/it] 20%|██        | 2/10 [00:18<01:14,  9.30s/it] 30%|███       | 3/10 [00:27<01:05,  9.30s/it] 40%|████      | 4/10 [00:37<00:55,  9.29s/it] 50%|█████     | 5/10 [00:46<00:46,  9.29s/it] 60%|██████    | 6/10 [00:55<00:37,  9.30s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.30s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.30s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.30s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.425654          12.02          50.27
+Final      10    0.596592   0.653627          77.89          97.99
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.003713      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.016121      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       0.022291      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       0.026563      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       0.042247      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       0.052948      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       0.056506      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       0.100780      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       0.133787      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       0.133901      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       0.149699      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       0.122998      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       0.125983      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.012463      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 11693238/14719818 (0.7944)
+FLOP Sparsity: 290937951/313478154 (0.9281)
+Time:  93.69033004809171
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.20it/s]100%|██████████| 1/1 [00:00<00:00,  1.20it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.27s/it] 20%|██        | 2/10 [00:18<01:14,  9.29s/it] 30%|███       | 3/10 [00:27<01:05,  9.30s/it] 40%|████      | 4/10 [00:37<00:55,  9.30s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.31s/it] 70%|███████   | 7/10 [01:05<00:27,  9.32s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.30s/it]100%|██████████| 10/10 [01:33<00:00,  9.30s/it]100%|██████████| 10/10 [01:33<00:00,  9.30s/it]
+Train results:
+                train_loss     test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN  2.417717e+00          11.73          50.17
+Pre-Prune  0          NaN  2.417717e+00          11.73          50.17
+Post-Prune 0          NaN  2.630505e+10          10.00          50.00
+Final      10    2.075694  1.998613e+00          28.45          78.84
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.265792      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.929338      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       1.172928      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       1.148654      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       1.441170      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       1.451823      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       1.240989      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       1.681742      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       1.881857      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       1.871122      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       1.870971      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       1.876320      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       2.130060      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.186161      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 11693238/14719818 (0.7944)
+FLOP Sparsity: 228535402/313478154 (0.7290)
+Time:  93.73972313757986
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.28it/s]100%|██████████| 1/1 [00:00<00:00,  3.28it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.32s/it] 20%|██        | 2/10 [00:18<01:14,  9.32s/it] 30%|███       | 3/10 [00:27<01:05,  9.32s/it] 40%|████      | 4/10 [00:37<00:55,  9.33s/it] 50%|█████     | 5/10 [00:46<00:46,  9.33s/it] 60%|██████    | 6/10 [00:55<00:37,  9.32s/it] 70%|███████   | 7/10 [01:05<00:27,  9.32s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.32s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:205: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:216: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(x, axis, dtype, out, keepdims)
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.396131          10.05          51.06
+Final      10    0.557949   0.604915          79.77          98.61
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   2.945027e+22      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.945027e+22      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   2.945027e+22      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   2.945027e+22      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.945027e+22      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   2.945027e+22      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   2.945027e+22      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   2.945027e+22      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   2.945026e+22      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   2.945027e+22      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   2.945026e+22      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   2.945026e+22      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   2.945028e+22      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   2.945027e+22      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 9289139/14719818 (0.6311)
+FLOP Sparsity: 257583398/313478154 (0.8217)
+Time:  93.90698050893843
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.92it/s]100%|██████████| 1/1 [00:00<00:00,  5.92it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.28s/it] 20%|██        | 2/10 [00:18<01:14,  9.32s/it] 30%|███       | 3/10 [00:27<01:05,  9.31s/it] 40%|████      | 4/10 [00:37<00:55,  9.31s/it] 50%|█████     | 5/10 [00:46<00:46,  9.32s/it] 60%|██████    | 6/10 [00:55<00:37,  9.32s/it] 70%|███████   | 7/10 [01:05<00:27,  9.31s/it] 80%|████████  | 8/10 [01:14<00:18,  9.34s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.34s/it]100%|██████████| 10/10 [01:33<00:00,  9.35s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302965          10.01          49.83
+Final      10    0.544902   0.569372          80.74          98.68
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   1.392548e+03      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.936300e+04      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   5.876383e+04      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   1.175173e+05      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.348988e+05      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   4.714861e+05      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   4.697657e+05      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   9.408655e+05      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   1.881480e+06      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   1.883604e+06      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   1.883816e+06      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   1.882481e+06      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   1.882456e+06      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   4.099733e+03      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 9289139/14719818 (0.6311)
+FLOP Sparsity: 197841838/313478154 (0.6311)
+Time:  93.9616672527045
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.92it/s]100%|██████████| 1/1 [00:00<00:00,  5.91it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.27s/it] 20%|██        | 2/10 [00:18<01:14,  9.29s/it] 30%|███       | 3/10 [00:27<01:05,  9.29s/it] 40%|████      | 4/10 [00:37<00:55,  9.31s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.30s/it] 70%|███████   | 7/10 [01:05<00:27,  9.31s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.30s/it]100%|██████████| 10/10 [01:33<00:00,  9.30s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.422262          10.01          49.55
+Final      10    0.561264   0.580644          80.48          98.64
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...     373.968018      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...    1730.575928      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...    3463.390137      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...    4910.584961      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...    9810.975586      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...   13856.869141      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...   13853.344727      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...   27728.505859      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...   39216.730469      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...   39200.449219      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...   39235.941406      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...   39234.457031      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...   39220.398438      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...     250.940384      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 9289139/14719818 (0.6311)
+FLOP Sparsity: 225822983/313478154 (0.7204)
+Time:  93.7339357258752
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.35it/s]100%|██████████| 1/1 [00:00<00:00,  3.35it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.25s/it] 20%|██        | 2/10 [00:18<01:14,  9.30s/it] 30%|███       | 3/10 [00:27<01:05,  9.31s/it] 40%|████      | 4/10 [00:37<00:55,  9.31s/it] 50%|█████     | 5/10 [00:46<00:46,  9.32s/it] 60%|██████    | 6/10 [00:55<00:37,  9.31s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.32s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.438170          10.36          51.83
+Final      10    0.576915   0.629216          79.13          98.44
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.003713      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.016121      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       0.022291      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       0.026563      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       0.042247      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       0.052948      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       0.056506      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       0.100780      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       0.133787      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       0.133901      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       0.149699      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       0.122998      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       0.125983      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.012463      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 9289139/14719818 (0.6311)
+FLOP Sparsity: 245462513/313478154 (0.7830)
+Time:  93.84400723874569
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.25it/s]100%|██████████| 1/1 [00:00<00:00,  1.25it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.27s/it] 20%|██        | 2/10 [00:18<01:14,  9.31s/it] 30%|███       | 3/10 [00:27<01:05,  9.32s/it] 40%|████      | 4/10 [00:37<00:55,  9.32s/it] 50%|█████     | 5/10 [00:46<00:46,  9.32s/it] 60%|██████    | 6/10 [00:55<00:37,  9.32s/it] 70%|███████   | 7/10 [01:05<00:27,  9.32s/it] 80%|████████  | 8/10 [01:14<00:18,  9.33s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.32s/it]
+Train results:
+                train_loss     test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN  2.417717e+00          11.73          50.17
+Pre-Prune  0          NaN  2.417717e+00          11.73          50.17
+Post-Prune 0          NaN  3.716807e+10          10.00          50.00
+Final      10    2.142863  2.062299e+00          25.56          75.56
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.265792      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.929338      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       1.172928      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       1.148655      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       1.441170      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       1.451824      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       1.240989      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       1.681742      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       1.881857      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       1.871122      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       1.870971      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       1.876320      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       2.130060      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.186161      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 9289140/14719818 (0.6311)
+FLOP Sparsity: 179291072/313478154 (0.5719)
+Time:  93.90985105931759
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.24it/s]100%|██████████| 1/1 [00:00<00:00,  3.24it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.31s/it] 20%|██        | 2/10 [00:18<01:14,  9.34s/it] 30%|███       | 3/10 [00:28<01:05,  9.35s/it] 40%|████      | 4/10 [00:37<00:56,  9.33s/it] 50%|█████     | 5/10 [00:46<00:46,  9.33s/it] 60%|██████    | 6/10 [00:55<00:37,  9.33s/it] 70%|███████   | 7/10 [01:05<00:27,  9.33s/it] 80%|████████  | 8/10 [01:14<00:18,  9.32s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.32s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:205: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:216: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(x, axis, dtype, out, keepdims)
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.329115           9.99          51.15
+Final      10    0.495301   0.575787          80.33          98.74
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   2.945027e+22      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.945027e+22      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   2.945027e+22      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   2.945027e+22      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.945027e+22      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   2.945027e+22      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   2.945027e+22      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   2.945027e+22      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   2.945026e+22      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   2.945027e+22      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   2.945026e+22      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   2.945026e+22      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   2.945028e+22      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   2.945027e+22      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 4657710/14719818 (0.3164)
+FLOP Sparsity: 201358519/313478154 (0.6423)
+Time:  94.00160593539476
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.03it/s]100%|██████████| 1/1 [00:00<00:00,  6.02it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.29s/it] 20%|██        | 2/10 [00:18<01:14,  9.30s/it] 30%|███       | 3/10 [00:27<01:05,  9.30s/it] 40%|████      | 4/10 [00:37<00:55,  9.30s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.30s/it] 70%|███████   | 7/10 [01:05<00:27,  9.31s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.30s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302582           9.66          50.48
+Final      10    0.638246   0.659905          77.58          98.16
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   1.392548e+03      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.936300e+04      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   5.876383e+04      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   1.175173e+05      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.348988e+05      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   4.714861e+05      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   4.697657e+05      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   9.408655e+05      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   1.881480e+06      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   1.883604e+06      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   1.883816e+06      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   1.882481e+06      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   1.882456e+06      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   4.099733e+03      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 4657710/14719818 (0.3164)
+FLOP Sparsity: 99134651/313478154 (0.3162)
+Time:  93.72180877812207
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.90it/s]100%|██████████| 1/1 [00:00<00:00,  5.89it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:24,  9.34s/it] 20%|██        | 2/10 [00:18<01:14,  9.34s/it] 30%|███       | 3/10 [00:28<01:05,  9.34s/it] 40%|████      | 4/10 [00:37<00:56,  9.34s/it] 50%|█████     | 5/10 [00:46<00:46,  9.33s/it] 60%|██████    | 6/10 [00:56<00:37,  9.33s/it] 70%|███████   | 7/10 [01:05<00:27,  9.33s/it] 80%|████████  | 8/10 [01:14<00:18,  9.33s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.329496           8.82          49.56
+Final      10    0.527094   0.587719          79.92          98.74
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...     373.968018      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...    1730.575928      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...    3463.390137      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...    4910.584961      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...    9810.975586      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...   13856.869141      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...   13853.344727      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...   27728.505859      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...   39216.730469      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...   39200.449219      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...   39235.941406      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...   39234.457031      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...   39220.398438      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...     250.940384      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 4657711/14719818 (0.3164)
+FLOP Sparsity: 145383527/313478154 (0.4638)
+Time:  94.00504540093243
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.21it/s]100%|██████████| 1/1 [00:00<00:00,  3.20it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:24,  9.34s/it] 20%|██        | 2/10 [00:18<01:14,  9.33s/it] 30%|███       | 3/10 [00:28<01:05,  9.33s/it] 40%|████      | 4/10 [00:37<00:55,  9.32s/it] 50%|█████     | 5/10 [00:46<00:46,  9.32s/it] 60%|██████    | 6/10 [00:55<00:37,  9.33s/it] 70%|███████   | 7/10 [01:05<00:28,  9.35s/it] 80%|████████  | 8/10 [01:14<00:18,  9.35s/it] 90%|█████████ | 9/10 [01:24<00:09,  9.35s/it]100%|██████████| 10/10 [01:33<00:00,  9.34s/it]100%|██████████| 10/10 [01:33<00:00,  9.34s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.441820           8.77          50.62
+Final      10    0.583359   0.650373          77.63          98.56
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.003713      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.016121      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       0.022291      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       0.026563      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       0.042247      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       0.052948      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       0.056506      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       0.100780      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       0.133787      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       0.133901      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       0.149699      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       0.122998      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       0.125983      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.012463      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 4657709/14719818 (0.3164)
+FLOP Sparsity: 146081773/313478154 (0.4660)
+Time:  94.05787843931466
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.24it/s]100%|██████████| 1/1 [00:00<00:00,  1.23it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.32s/it] 20%|██        | 2/10 [00:18<01:14,  9.32s/it] 30%|███       | 3/10 [00:27<01:05,  9.32s/it] 40%|████      | 4/10 [00:37<00:55,  9.33s/it] 50%|█████     | 5/10 [00:46<00:46,  9.33s/it] 60%|██████    | 6/10 [00:55<00:37,  9.33s/it] 70%|███████   | 7/10 [01:05<00:27,  9.33s/it] 80%|████████  | 8/10 [01:14<00:18,  9.32s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.34s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]
+Train results:
+                train_loss     test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN  2.417717e+00          11.73          50.17
+Pre-Prune  0          NaN  2.417717e+00          11.73          50.17
+Post-Prune 0          NaN  4.058092e+10          10.00          50.00
+Final      10    2.117403  2.064477e+00          24.10          76.39
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.265792      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.929338      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       1.172928      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       1.148654      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       1.441170      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       1.451823      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       1.240989      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       1.681742      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       1.881857      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       1.871122      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       1.870971      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       1.876319      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       2.130060      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.186161      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 4657711/14719818 (0.3164)
+FLOP Sparsity: 118211974/313478154 (0.3771)
+Time:  93.95948999747634
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.22it/s]100%|██████████| 1/1 [00:00<00:00,  3.22it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.32s/it] 20%|██        | 2/10 [00:18<01:14,  9.31s/it] 30%|███       | 3/10 [00:27<01:05,  9.31s/it] 40%|████      | 4/10 [00:37<00:55,  9.32s/it] 50%|█████     | 5/10 [00:46<00:46,  9.35s/it] 60%|██████    | 6/10 [00:56<00:37,  9.34s/it] 70%|███████   | 7/10 [01:05<00:28,  9.34s/it] 80%|████████  | 8/10 [01:14<00:18,  9.33s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.32s/it]100%|██████████| 10/10 [01:33<00:00,  9.34s/it]100%|██████████| 10/10 [01:33<00:00,  9.33s/it]
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:205: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:216: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(x, axis, dtype, out, keepdims)
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302601          10.00          49.95
+Final      10    0.514662   0.575284          80.23          98.74
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   2.945027e+22      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.945027e+22      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   2.945027e+22      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   2.945027e+22      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.945027e+22      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   2.945027e+22      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   2.945027e+22      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   2.945027e+22      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   2.945026e+22      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   2.945027e+22      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   2.945026e+22      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   2.945026e+22      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   2.945028e+22      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   2.945027e+22      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475792/14719818 (0.1003)
+FLOP Sparsity: 143301021/313478154 (0.4571)
+Time:  94.03010434936732
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.91it/s]100%|██████████| 1/1 [00:00<00:00,  5.91it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.28s/it] 20%|██        | 2/10 [00:18<01:14,  9.29s/it] 30%|███       | 3/10 [00:27<01:05,  9.30s/it] 40%|████      | 4/10 [00:37<00:55,  9.30s/it] 50%|█████     | 5/10 [00:46<00:46,  9.31s/it] 60%|██████    | 6/10 [00:55<00:37,  9.31s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.32s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302585          10.04          49.65
+Final      10    2.302675   2.302590          10.00          50.00
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   1.392548e+03      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.936300e+04      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   5.876383e+04      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   1.175173e+05      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.348988e+05      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   4.714861e+05      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   4.697657e+05      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   9.408655e+05      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   1.881480e+06      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   1.883604e+06      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   1.883816e+06      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   1.882481e+06      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   1.882456e+06      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   4.099733e+03      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475793/14719818 (0.1003)
+FLOP Sparsity: 31597941/313478154 (0.1008)
+Time:  93.72790030948818
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.23it/s]100%|██████████| 1/1 [00:00<00:00,  6.22it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.30s/it] 20%|██        | 2/10 [00:18<01:14,  9.32s/it] 30%|███       | 3/10 [00:27<01:05,  9.32s/it] 40%|████      | 4/10 [00:37<00:55,  9.33s/it] 50%|█████     | 5/10 [00:46<00:46,  9.34s/it] 60%|██████    | 6/10 [00:55<00:37,  9.33s/it] 70%|███████   | 7/10 [01:05<00:28,  9.36s/it] 80%|████████  | 8/10 [01:14<00:18,  9.35s/it] 90%|█████████ | 9/10 [01:24<00:09,  9.35s/it]100%|██████████| 10/10 [01:33<00:00,  9.37s/it]100%|██████████| 10/10 [01:33<00:00,  9.35s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.303128          11.55          49.51
+Final      10    0.574281   0.593522          79.71          98.87
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...     373.968018      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...    1730.575928      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...    3463.390137      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...    4910.584961      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...    9810.975586      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...   13856.869141      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...   13853.344727      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...   27728.505859      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...   39216.730469      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...   39200.449219      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...   39235.941406      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...   39234.457031      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...   39220.398438      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...     250.940384      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475793/14719818 (0.1003)
+FLOP Sparsity: 76875004/313478154 (0.2452)
+Time:  94.17186793964356
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.89it/s]100%|██████████| 1/1 [00:00<00:00,  2.89it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.26s/it] 20%|██        | 2/10 [00:18<01:14,  9.27s/it] 30%|███       | 3/10 [00:27<01:04,  9.28s/it] 40%|████      | 4/10 [00:37<00:55,  9.29s/it] 50%|█████     | 5/10 [00:46<00:46,  9.32s/it] 60%|██████    | 6/10 [00:55<00:37,  9.33s/it] 70%|███████   | 7/10 [01:05<00:28,  9.34s/it] 80%|████████  | 8/10 [01:14<00:18,  9.34s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.33s/it]100%|██████████| 10/10 [01:33<00:00,  9.34s/it]100%|██████████| 10/10 [01:33<00:00,  9.32s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.321671           9.71          50.37
+Final      10     0.64985   0.684937          76.38          98.07
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.003713      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.016121      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       0.022291      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       0.026563      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       0.042247      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       0.052948      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       0.056506      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       0.100780      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       0.133787      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       0.133901      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       0.149699      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       0.122998      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       0.125983      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.012463      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475792/14719818 (0.1003)
+FLOP Sparsity: 63876719/313478154 (0.2038)
+Time:  93.9023418277502
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.20it/s]100%|██████████| 1/1 [00:00<00:00,  1.20it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.30s/it] 20%|██        | 2/10 [00:18<01:14,  9.30s/it] 30%|███       | 3/10 [00:27<01:05,  9.34s/it] 40%|████      | 4/10 [00:37<00:56,  9.33s/it] 50%|█████     | 5/10 [00:46<00:46,  9.33s/it] 60%|██████    | 6/10 [00:56<00:37,  9.34s/it] 70%|███████   | 7/10 [01:05<00:28,  9.34s/it] 80%|████████  | 8/10 [01:14<00:18,  9.35s/it] 90%|█████████ | 9/10 [01:24<00:09,  9.35s/it]100%|██████████| 10/10 [01:33<00:00,  9.35s/it]100%|██████████| 10/10 [01:33<00:00,  9.34s/it]
+Train results:
+                 train_loss     test_loss  top1_accuracy  top5_accuracy
+Init.      0           NaN  2.417717e+00          11.73          50.17
+Pre-Prune  0           NaN  2.417717e+00          11.73          50.17
+Post-Prune 0           NaN  7.880976e+09          10.00          50.00
+Final      10  2149.258367  3.153376e+03          12.24          53.23
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.265792      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.929338      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       1.172928      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       1.148654      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       1.441170      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       1.451824      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       1.240989      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       1.681742      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       1.881857      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       1.871122      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       1.870971      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       1.876319      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       2.130060      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.186161      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 1475792/14719818 (0.1003)
+FLOP Sparsity: 55155180/313478154 (0.1759)
+Time:  94.12315244972706
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.37it/s]100%|██████████| 1/1 [00:00<00:00,  3.37it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.32s/it] 20%|██        | 2/10 [00:18<01:14,  9.30s/it] 30%|███       | 3/10 [00:27<01:05,  9.29s/it] 40%|████      | 4/10 [00:37<00:55,  9.29s/it] 50%|█████     | 5/10 [00:46<00:46,  9.30s/it] 60%|██████    | 6/10 [00:55<00:37,  9.29s/it] 70%|███████   | 7/10 [01:05<00:27,  9.30s/it] 80%|████████  | 8/10 [01:14<00:18,  9.31s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.31s/it]100%|██████████| 10/10 [01:33<00:00,  9.30s/it]
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:205: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/home/vikashm/.local/lib/python3.6/site-packages/numpy/core/_methods.py:216: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(x, axis, dtype, out, keepdims)
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302585          10.00          50.00
+Final      10    2.302652   2.302590          10.00          50.00
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   2.945027e+22      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.945027e+22      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   2.945027e+22      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   2.945027e+22      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.945027e+22      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   2.945027e+22      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   2.945027e+22      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   2.945027e+22      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   2.945026e+22      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   2.945027e+22      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   2.945026e+22      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   2.945026e+22      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   2.945028e+22      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   2.945027e+22      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 151390/14719818 (0.0103)
+FLOP Sparsity: 57830479/313478154 (0.1845)
+Time:  93.73636227101088
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.65it/s]100%|██████████| 1/1 [00:00<00:00,  6.64it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.29s/it] 20%|██        | 2/10 [00:18<01:14,  9.28s/it] 30%|███       | 3/10 [00:27<01:05,  9.29s/it] 40%|████      | 4/10 [00:37<00:55,  9.28s/it] 50%|█████     | 5/10 [00:46<00:46,  9.28s/it] 60%|██████    | 6/10 [00:55<00:37,  9.29s/it] 70%|███████   | 7/10 [01:05<00:27,  9.29s/it] 80%|████████  | 8/10 [01:14<00:18,  9.28s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.27s/it]100%|██████████| 10/10 [01:32<00:00,  9.29s/it]100%|██████████| 10/10 [01:32<00:00,  9.28s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302585           9.87          50.00
+Final      10    2.302675   2.302590          10.00          50.00
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...   1.392548e+03      True
+1    layers.0.conv    bias  ...   0.000000e+00     False
+2    layers.1.conv  weight  ...   2.936300e+04      True
+3    layers.1.conv    bias  ...   0.000000e+00     False
+4    layers.3.conv  weight  ...   5.876383e+04      True
+5    layers.3.conv    bias  ...   0.000000e+00     False
+6    layers.4.conv  weight  ...   1.175173e+05      True
+7    layers.4.conv    bias  ...   0.000000e+00     False
+8    layers.6.conv  weight  ...   2.348988e+05      True
+9    layers.6.conv    bias  ...   0.000000e+00     False
+10   layers.7.conv  weight  ...   4.714861e+05      True
+11   layers.7.conv    bias  ...   0.000000e+00     False
+12   layers.8.conv  weight  ...   4.697657e+05      True
+13   layers.8.conv    bias  ...   0.000000e+00     False
+14  layers.10.conv  weight  ...   9.408655e+05      True
+15  layers.10.conv    bias  ...   0.000000e+00     False
+16  layers.11.conv  weight  ...   1.881480e+06      True
+17  layers.11.conv    bias  ...   0.000000e+00     False
+18  layers.12.conv  weight  ...   1.883604e+06      True
+19  layers.12.conv    bias  ...   0.000000e+00     False
+20  layers.14.conv  weight  ...   1.883816e+06      True
+21  layers.14.conv    bias  ...   0.000000e+00     False
+22  layers.15.conv  weight  ...   1.882481e+06      True
+23  layers.15.conv    bias  ...   0.000000e+00     False
+24  layers.16.conv  weight  ...   1.882456e+06      True
+25  layers.16.conv    bias  ...   0.000000e+00     False
+26              fc  weight  ...   4.099733e+03      True
+27              fc    bias  ...   0.000000e+00     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 151389/14719818 (0.0103)
+FLOP Sparsity: 3403651/313478154 (0.0109)
+Time:  93.51486101746559
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.46it/s]100%|██████████| 1/1 [00:00<00:00,  6.46it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:24,  9.34s/it] 20%|██        | 2/10 [00:18<01:14,  9.37s/it] 30%|███       | 3/10 [00:28<01:05,  9.36s/it] 40%|████      | 4/10 [00:37<00:56,  9.35s/it] 50%|█████     | 5/10 [00:46<00:46,  9.35s/it] 60%|██████    | 6/10 [00:56<00:37,  9.36s/it] 70%|███████   | 7/10 [01:05<00:28,  9.35s/it] 80%|████████  | 8/10 [01:14<00:18,  9.35s/it] 90%|█████████ | 9/10 [01:24<00:09,  9.36s/it]100%|██████████| 10/10 [01:33<00:00,  9.37s/it]100%|██████████| 10/10 [01:33<00:00,  9.36s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302585          10.99          49.86
+Final      10    1.519019   1.432273          47.67          92.86
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...     373.968018      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...    1730.575928      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...    3463.390137      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...    4910.584961      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...    9810.975586      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...   13856.869141      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...   13853.344727      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...   27728.505859      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...   39216.730469      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...   39200.449219      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...   39235.941406      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...   39234.457031      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...   39220.398438      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...     250.940384      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 151390/14719818 (0.0103)
+FLOP Sparsity: 24470718/313478154 (0.0781)
+Time:  94.33609477430582
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.38it/s]100%|██████████| 1/1 [00:00<00:00,  3.37it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:24,  9.35s/it] 20%|██        | 2/10 [00:18<01:14,  9.35s/it] 30%|███       | 3/10 [00:28<01:05,  9.34s/it] 40%|████      | 4/10 [00:37<00:56,  9.34s/it] 50%|█████     | 5/10 [00:46<00:46,  9.33s/it] 60%|██████    | 6/10 [00:56<00:37,  9.33s/it] 70%|███████   | 7/10 [01:05<00:27,  9.33s/it] 80%|████████  | 8/10 [01:14<00:18,  9.34s/it] 90%|█████████ | 9/10 [01:24<00:09,  9.34s/it]100%|██████████| 10/10 [01:33<00:00,  9.34s/it]100%|██████████| 10/10 [01:33<00:00,  9.34s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.302597          10.00          50.00
+Final      10    1.249159   1.202388          55.49          95.55
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.003713      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.016121      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       0.022291      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       0.026563      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       0.042247      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       0.052948      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       0.056506      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       0.100780      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       0.133787      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       0.133901      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       0.149699      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       0.122998      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       0.125983      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.012463      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 151390/14719818 (0.0103)
+FLOP Sparsity: 13936183/313478154 (0.0445)
+Time:  94.04456712398678
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.23it/s]100%|██████████| 1/1 [00:00<00:00,  1.23it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:23,  9.30s/it] 20%|██        | 2/10 [00:18<01:14,  9.30s/it] 30%|███       | 3/10 [00:27<01:05,  9.32s/it] 40%|████      | 4/10 [00:37<00:55,  9.32s/it] 50%|█████     | 5/10 [00:46<00:46,  9.33s/it] 60%|██████    | 6/10 [00:55<00:37,  9.34s/it] 70%|███████   | 7/10 [01:05<00:28,  9.35s/it] 80%|████████  | 8/10 [01:14<00:18,  9.34s/it] 90%|█████████ | 9/10 [01:23<00:09,  9.34s/it]100%|██████████| 10/10 [01:33<00:00,  9.35s/it]100%|██████████| 10/10 [01:33<00:00,  9.34s/it]
+Train results:
+                train_loss      test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN       2.417717          11.73          50.17
+Pre-Prune  0          NaN       2.417717          11.73          50.17
+Post-Prune 0          NaN  110018.531150          10.00          50.00
+Final      10    2.293514       2.303154          14.16          62.32
+Prune results:
+             module   param  ...  score abs sum  prunable
+0    layers.0.conv  weight  ...       0.265792      True
+1    layers.0.conv    bias  ...       0.000000     False
+2    layers.1.conv  weight  ...       0.929338      True
+3    layers.1.conv    bias  ...       0.000000     False
+4    layers.3.conv  weight  ...       1.172928      True
+5    layers.3.conv    bias  ...       0.000000     False
+6    layers.4.conv  weight  ...       1.148655      True
+7    layers.4.conv    bias  ...       0.000000     False
+8    layers.6.conv  weight  ...       1.441170      True
+9    layers.6.conv    bias  ...       0.000000     False
+10   layers.7.conv  weight  ...       1.451824      True
+11   layers.7.conv    bias  ...       0.000000     False
+12   layers.8.conv  weight  ...       1.240989      True
+13   layers.8.conv    bias  ...       0.000000     False
+14  layers.10.conv  weight  ...       1.681742      True
+15  layers.10.conv    bias  ...       0.000000     False
+16  layers.11.conv  weight  ...       1.881857      True
+17  layers.11.conv    bias  ...       0.000000     False
+18  layers.12.conv  weight  ...       1.871122      True
+19  layers.12.conv    bias  ...       0.000000     False
+20  layers.14.conv  weight  ...       1.870971      True
+21  layers.14.conv    bias  ...       0.000000     False
+22  layers.15.conv  weight  ...       1.876319      True
+23  layers.15.conv    bias  ...       0.000000     False
+24  layers.16.conv  weight  ...       2.130061      True
+25  layers.16.conv    bias  ...       0.000000     False
+26              fc  weight  ...       0.186161      True
+27              fc    bias  ...       0.000000     False
+
+[28 rows x 13 columns]
+Parameter Sparsity: 151390/14719818 (0.0103)
+FLOP Sparsity: 18710029/313478154 (0.0597)
+Time:  94.11875577270985
+Saving results.
