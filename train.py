@@ -2,8 +2,10 @@ import torch
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
+from torch.utils.tensorboard import SummaryWriter
 
-def train(model, loss, optimizer, dataloader, device, epoch, verbose, log_interval=10):
+
+def train(model, loss, optimizer, dataloader, device, epoch, verbose, writer, log_interval=10):
     model.train()
     total = 0
     for batch_idx, (data, target) in enumerate(dataloader):
@@ -18,6 +20,15 @@ def train(model, loss, optimizer, dataloader, device, epoch, verbose, log_interv
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
                 epoch, batch_idx * len(data), len(dataloader.dataset),
                 100. * batch_idx / len(dataloader), train_loss.item()))
+    for name, layer in model.named_modules():
+        if isinstance(layer, torch.nn.Conv2d):
+            writer.add_histogram(name, layer.weight, global_step = epoch, bins='tensorflow')
+            writer.add_histogram(f'{name}_bias', layer.bias, global_step=epoch, bins='tensorflow')
+        elif isinstance(layer, torch.nn.Linear):
+            writer.add_histogram(name, layer.weight, global_step = epoch, bins='tensorflow')
+            writer.add_histogram(f'{name}_bias', layer.bias, global_step=epoch, bins='tensorflow')
+        
+        
     return total / len(dataloader.dataset)
 
 def eval(model, loss, dataloader, device, verbose):
@@ -43,14 +54,16 @@ def eval(model, loss, dataloader, device, verbose):
     return average_loss, accuracy1, accuracy5
 
 def train_eval_loop(model, loss, optimizer, scheduler, train_loader, test_loader, device, epochs, verbose):
+    writer = SummaryWriter()
     test_loss, accuracy1, accuracy5 = eval(model, loss, test_loader, device, verbose)
     rows = [[np.nan, test_loss, accuracy1, accuracy5]]
     for epoch in tqdm(range(epochs)):
-        train_loss = train(model, loss, optimizer, train_loader, device, epoch, verbose)
+        train_loss = train(model, loss, optimizer, train_loader, device, epoch, verbose, writer)
         test_loss, accuracy1, accuracy5 = eval(model, loss, test_loader, device, verbose)
         row = [train_loss, test_loss, accuracy1, accuracy5]
         scheduler.step()
         rows.append(row)
+    writer.close()
     columns = ['train_loss', 'test_loss', 'top1_accuracy', 'top5_accuracy']
     return pd.DataFrame(rows, columns=columns)
 
