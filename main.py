@@ -93,8 +93,8 @@ if __name__ == '__main__':
                         help='experiment name (default: example)')
     parser.add_argument('--expid', type=str, default='',
                         help='name used to save results (default: "")')
-    parser.add_argument('--result-dir', type=str, default='Results/data',
-                        help='path to directory to save results (default: "Results/data")')
+    parser.add_argument('--result-dir', type=str, default='/scratch/network/ogolev/Results/data',
+                        help='path to directory to save results (default: "/scratch/network/ogolev/Results/data")')
     parser.add_argument('--gpu', type=int, default='0',
                         help='number of GPU device to use (default: 0)')
     parser.add_argument('--workers', type=int, default='4',
