@@ -32,11 +32,13 @@ def run(args):
     optimizer = opt_class(generator.parameters(model), lr=args.lr, weight_decay=args.weight_decay, **opt_kwargs)
     scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=args.lr_drops, gamma=args.lr_drop_rate)
 
+    ## Name ##
+    graph_name = '{}-{}-{}-{}'.format(args.model, args.dataset, args.pruner, args.compression)
 
     ## Pre-Train ##
     print('Pre-Train for {} epochs.'.format(args.pre_epochs))
     pre_result = train_eval_loop(model, loss, optimizer, scheduler, train_loader, 
-                                 test_loader, device, args.pre_epochs, args.verbose)
+                                 test_loader, device, args.pre_epochs, args.verbose, graph_name)
 
     ## Prune ##
     print('Pruning with {} for {} epochs.'.format(args.pruner, args.prune_epochs))
@@ -44,13 +46,12 @@ def run(args):
     sparsity = 10**(-float(args.compression))
     prune_loop(model, loss, pruner, prune_loader, device, sparsity, 
                args.compression_schedule, args.mask_scope, args.prune_epochs, args.reinitialize, args.prune_train_mode, args.shuffle, args.invert)
-
     
     ## Post-Train ##
     print('Post-Training for {} epochs.'.format(args.post_epochs))
     start = timeit.default_timer()
     post_result = train_eval_loop(model, loss, optimizer, scheduler, train_loader, 
-                                  test_loader, device, args.post_epochs, args.verbose) 
+                                  test_loader, device, args.post_epochs, args.verbose, graph_name) 
     stop = timeit.default_timer()
     print('Time: ', stop - start)
 
