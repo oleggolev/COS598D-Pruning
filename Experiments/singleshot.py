@@ -66,7 +66,8 @@ def run(args):
     total_flops = int((prune_result['sparsity'] * prune_result['flops']).sum())
     possible_flops = prune_result['flops'].sum()
     print("Train results:\n", train_result)
-    print("Prune results:\n", prune_result)
+    with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+        print("Prune results:\n", prune_result)
     print("Parameter Sparsity: {}/{} ({:.4f})".format(total_params, possible_params, total_params / possible_params))
     print("FLOP Sparsity: {}/{} ({:.4f})".format(total_flops, possible_flops, total_flops / possible_flops))
 
