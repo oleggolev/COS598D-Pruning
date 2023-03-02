@@ -4,7 +4,7 @@ import numpy as np
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
 
-def train(model, loss, optimizer, dataloader, device, epoch, verbose, graph_name, log_interval=10):
+def train(model, loss, optimizer, dataloader, device, epoch, verbose, writer, graph_name, log_interval=10):
     model.train()
     total = 0
     for batch_idx, (data, target) in enumerate(dataloader):
