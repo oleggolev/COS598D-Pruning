@@ -1,0 +1,470 @@
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.92it/s]100%|██████████| 1/1 [00:00<00:00,  5.92it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.23it/s]100%|██████████| 1/1 [00:00<00:00,  6.23it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.00it/s]100%|██████████| 1/1 [00:00<00:00,  3.00it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.21it/s]100%|██████████| 1/1 [00:00<00:00,  1.21it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.06it/s]100%|██████████| 1/1 [00:00<00:00,  3.05it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 481.72it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 439.29it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with snip for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.52it/s]100%|██████████| 1/1 [00:00<00:00,  6.51it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with grasp for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.14it/s]100%|██████████| 1/1 [00:00<00:00,  3.13it/s]
+Post-Training for 10 epochs.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 61, in run
+    test_loader, device, args.post_epochs, args.verbose, graph_name) 
+TypeError: train_eval_loop() missing 1 required positional argument: 'graph_name'
+Loading mnist dataset.
+Creating default-fc model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with synflow for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.00it/s]100%|██████████| 1/1 [00:00<00:00,  5.99it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:23,  2.59s/it] 20%|██        | 2/10 [00:05<00:20,  2.56s/it] 30%|███       | 3/10 [00:07<00:17,  2.57s/it] 40%|████      | 4/10 [00:10<00:15,  2.56s/it] 50%|█████     | 5/10 [00:12<00:12,  2.55s/it] 60%|██████    | 6/10 [00:15<00:10,  2.55s/it] 70%|███████   | 7/10 [00:17<00:07,  2.55s/it] 80%|████████  | 8/10 [00:20<00:05,  2.56s/it] 90%|█████████ | 9/10 [00:22<00:02,  2.55s/it]100%|██████████| 10/10 [00:25<00:00,  2.54s/it]100%|██████████| 10/10 [00:25<00:00,  2.55s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.306855          10.32          47.39
+Pre-Prune  0          NaN   2.306855          10.32          47.39
+Post-Prune 0          NaN   2.306644          10.32          49.80
+Final      10    2.301366   2.301025          11.35          52.14
+Prune results:
+    module   param  sparsity   size       shape  flops  score mean  \
+0       1  weight    0.0000  78400  (100, 784)  78400    5.375414   
+1       1    bias    1.0000    100      (100,)    100    0.000000   
+2       3  weight    0.2801  10000  (100, 100)  10000   42.197372   
+3       3    bias    1.0000    100      (100,)    100    0.000000   
+4       5  weight    0.2774  10000  (100, 100)  10000   42.228401   
+5       5    bias    1.0000    100      (100,)    100    0.000000   
+6       7  weight    0.2796  10000  (100, 100)  10000   42.234432   
+7       7    bias    1.0000    100      (100,)    100    0.000000   
+8       9  weight    0.2638  10000  (100, 100)  10000   42.235725   
+9       9    bias    1.0000    100      (100,)    100    0.000000   
+10     11  weight    0.9310   1000   (10, 100)   1000  422.359253   
+11     11    bias    1.0000     10       (10,)     10    0.000000   
+
+    score variance     score sum  score abs mean  score abs variance  \
+0         9.872968  421432.43750        5.375414            9.872968   
+1         0.000000       0.00000        0.000000            0.000000   
+2       606.436279  421973.71875       42.197372          606.436279   
+3         0.000000       0.00000        0.000000            0.000000   
+4       605.871521  422284.00000       42.228401          605.871521   
+5         0.000000       0.00000        0.000000            0.000000   
+6       616.338745  422344.31250       42.234432          616.338745   
+7         0.000000       0.00000        0.000000            0.000000   
+8       690.546692  422357.25000       42.235725          690.546692   
+9         0.000000       0.00000        0.000000            0.000000   
+10    62346.089844  422359.25000      422.359253        62346.089844   
+11        0.000000       0.00000        0.000000            0.000000   
+
+    score abs sum  prunable  
+0    421432.43750      True  
+1         0.00000     False  
+2    421973.71875      True  
+3         0.00000     False  
+4    422284.00000      True  
+5         0.00000     False  
+6    422344.31250      True  
+7         0.00000     False  
+8    422357.25000      True  
+9         0.00000     False  
+10   422359.25000      True  
+11        0.00000     False  
+Parameter Sparsity: 12449/119910 (0.1038)
+FLOP Sparsity: 12449/119910 (0.1038)
+Time:  25.970000551082194
+Saving results.
+Traceback (most recent call last):
+  File "main.py", line 135, in <module>
+    singleshot.run(args)
+  File "/home/vikashm/COS598D/COS598D-Pruning/Experiments/singleshot.py", line 83, in run
+    pre_result.to_pickle("{}/pre-train.pkl".format(args.result_dir))
+  File "/home/vikashm/.local/lib/python3.6/site-packages/pandas/core/generic.py", line 2676, in to_pickle
+    to_pickle(self, path, compression=compression, protocol=protocol)
+  File "/home/vikashm/.local/lib/python3.6/site-packages/pandas/io/pickle.py", line 83, in to_pickle
+    f, fh = get_handle(fp_or_buf, "wb", compression=compression, is_text=False)
+  File "/home/vikashm/.local/lib/python3.6/site-packages/pandas/io/common.py", line 499, in get_handle
+    f = open(path_or_buf, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/network/vikashm/Results/data_sparsity_order2/singleshot/hp-mnist-fc-synflow/pre-train.pkl'
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with rand for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.71it/s]100%|██████████| 1/1 [00:00<00:00,  5.71it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:24,  9.34s/it] 20%|██        | 2/10 [00:18<01:14,  9.33s/it] 30%|███       | 3/10 [00:27<01:05,  9.33s/it] 40%|████      | 4/10 [00:37<00:56,  9.36s/it] 50%|█████     | 5/10 [00:46<00:46,  9.38s/it] 60%|██████    | 6/10 [00:56<00:37,  9.40s/it] 70%|███████   | 7/10 [01:05<00:28,  9.42s/it] 80%|████████  | 8/10 [01:15<00:18,  9.42s/it] 90%|█████████ | 9/10 [01:24<00:09,  9.42s/it]100%|██████████| 10/10 [01:34<00:00,  9.43s/it]100%|██████████| 10/10 [01:34<00:00,  9.40s/it]
+Train results:
+                train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0          NaN   2.417717          11.73          50.17
+Pre-Prune  0          NaN   2.417717          11.73          50.17
+Post-Prune 0          NaN   2.337658          10.00          50.00
+Final      10    0.572369   0.636468          79.01          98.26
+Prune results:
+             module   param  sparsity     size             shape     flops  \
+0    layers.0.conv  weight  0.881944     1728     (64, 3, 3, 3)   1769472   
+1    layers.0.conv    bias  1.000000       64             (64,)     65536   
+2    layers.1.conv  weight  0.892687    36864    (64, 64, 3, 3)  37748736   
+3    layers.1.conv    bias  1.000000       64             (64,)     65536   
+4    layers.3.conv  weight  0.892849    73728   (128, 64, 3, 3)  18874368   
+5    layers.3.conv    bias  1.000000      128            (128,)     32768   
+6    layers.4.conv  weight  0.890455   147456  (128, 128, 3, 3)  37748736   
+7    layers.4.conv    bias  1.000000      128            (128,)     32768   
+8    layers.6.conv  weight  0.891205   294912  (256, 128, 3, 3)  18874368   
+9    layers.6.conv    bias  1.000000      256            (256,)     16384   
+10   layers.7.conv  weight  0.891018   589824  (256, 256, 3, 3)  37748736   
+11   layers.7.conv    bias  1.000000      256            (256,)     16384   
+12   layers.8.conv  weight  0.891900   589824  (256, 256, 3, 3)  37748736   
+13   layers.8.conv    bias  1.000000      256            (256,)     16384   
+14  layers.10.conv  weight  0.891771  1179648  (512, 256, 3, 3)  18874368   
+15  layers.10.conv    bias  1.000000      512            (512,)      8192   
+16  layers.11.conv  weight  0.891345  2359296  (512, 512, 3, 3)  37748736   
+17  layers.11.conv    bias  1.000000      512            (512,)      8192   
+18  layers.12.conv  weight  0.890949  2359296  (512, 512, 3, 3)  37748736   
+19  layers.12.conv    bias  1.000000      512            (512,)      8192   
+20  layers.14.conv  weight  0.891241  2359296  (512, 512, 3, 3)   9437184   
+21  layers.14.conv    bias  1.000000      512            (512,)      2048   
+22  layers.15.conv  weight  0.890990  2359296  (512, 512, 3, 3)   9437184   
+23  layers.15.conv    bias  1.000000      512            (512,)      2048   
+24  layers.16.conv  weight  0.891363  2359296  (512, 512, 3, 3)   9437184   
+25  layers.16.conv    bias  1.000000      512            (512,)      2048   
+26              fc  weight  0.888086     5120         (10, 512)      5120   
+27              fc    bias  1.000000       10             (10,)        10   
+
+    score mean  score variance    score sum  score abs mean  \
+0    -0.027050        1.005513   -46.742134        0.805873   
+1     0.000000        0.000000     0.000000        0.000000   
+2     0.000872        0.996963    32.139240        0.796522   
+3     0.000000        0.000000     0.000000        0.000000   
+4     0.002275        0.995316   167.755142        0.797035   
+5     0.000000        0.000000     0.000000        0.000000   
+6    -0.003706        1.001925  -546.486389        0.796965   
+7     0.000000        0.000000     0.000000        0.000000   
+8    -0.001777        0.997400  -524.047424        0.796505   
+9     0.000000        0.000000     0.000000        0.000000   
+10   -0.000449        1.003191  -264.565430        0.799367   
+11    0.000000        0.000000     0.000000        0.000000   
+12    0.000444        0.998147   261.771423        0.796451   
+13    0.000000        0.000000     0.000000        0.000000   
+14    0.000713        0.998411   841.403320        0.797582   
+15    0.000000        0.000000     0.000000        0.000000   
+16    0.000056        0.998994   132.429825        0.797475   
+17    0.000000        0.000000     0.000000        0.000000   
+18   -0.000936        1.001451 -2208.687256        0.798376   
+19    0.000000        0.000000     0.000000        0.000000   
+20    0.000769        1.000620  1815.271362        0.798465   
+21    0.000000        0.000000     0.000000        0.000000   
+22   -0.000614        1.000337 -1448.010010        0.797900   
+23    0.000000        0.000000     0.000000        0.000000   
+24    0.000050        1.000106   119.138557        0.797889   
+25    0.000000        0.000000     0.000000        0.000000   
+26   -0.034330        1.005531  -175.771698        0.800729   
+27    0.000000        0.000000     0.000000        0.000000   
+
+    score abs variance  score abs sum  prunable  
+0             0.356814   1.392548e+03      True  
+1             0.000000   0.000000e+00     False  
+2             0.362516   2.936300e+04      True  
+3             0.000000   0.000000e+00     False  
+4             0.360056   5.876383e+04      True  
+5             0.000000   0.000000e+00     False  
+6             0.366784   1.175173e+05      True  
+7             0.000000   0.000000e+00     False  
+8             0.362983   2.348988e+05      True  
+9             0.000000   0.000000e+00     False  
+10            0.364203   4.714861e+05      True  
+11            0.000000   0.000000e+00     False  
+12            0.363814   4.697657e+05      True  
+13            0.000000   0.000000e+00     False  
+14            0.362275   9.408655e+05      True  
+15            0.000000   0.000000e+00     False  
+16            0.363027   1.881480e+06      True  
+17            0.000000   0.000000e+00     False  
+18            0.364049   1.883604e+06      True  
+19            0.000000   0.000000e+00     False  
+20            0.363073   1.883816e+06      True  
+21            0.000000   0.000000e+00     False  
+22            0.363694   1.882481e+06      True  
+23            0.000000   0.000000e+00     False  
+24            0.363478   1.882456e+06      True  
+25            0.000000   0.000000e+00     False  
+26            0.365542   4.099733e+03      True  
+27            0.000000   0.000000e+00     False  
+Parameter Sparsity: 13119512/14719818 (0.8913)
+FLOP Sparsity: 279470936/313478154 (0.8915)
+Time:  94.72180114407092
+Saving results.
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/vikashm/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Pruning with mag for 1 epochs.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  5.87it/s]100%|██████████| 1/1 [00:00<00:00,  5.86it/s]Post-Training for 10 epochs.
+
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:09<01:25,  9.47s/it]slurmstepd: error: *** JOB 1723997 ON adroit-h11g1 CANCELLED AT 2023-03-02T20:21:01 ***

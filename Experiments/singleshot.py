@@ -33,10 +33,18 @@ def run(args):
     scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=args.lr_drops, gamma=args.lr_drop_rate)
 
 
+    ## Name ##
+    graph_name = '{}-{}-{}-{}'.format(args.model, args.dataset, args.pruner, args.compression)
+
     ## Pre-Train ##
     print('Pre-Train for {} epochs.'.format(args.pre_epochs))
     pre_result = train_eval_loop(model, loss, optimizer, scheduler, train_loader, 
-                                 test_loader, device, args.pre_epochs, args.verbose)
+                                 test_loader, device, args.pre_epochs, args.verbose, graph_name)
+
+    # ## Pre-Train ##
+    # print('Pre-Train for {} epochs.'.format(args.pre_epochs))
+    # pre_result = train_eval_loop(model, loss, optimizer, scheduler, train_loader, 
+    #                              test_loader, device, args.pre_epochs, args.verbose)
 
     ## Prune ##
     print('Pruning with {} for {} epochs.'.format(args.pruner, args.prune_epochs))
@@ -50,7 +58,7 @@ def run(args):
     print('Post-Training for {} epochs.'.format(args.post_epochs))
     start = timeit.default_timer()
     post_result = train_eval_loop(model, loss, optimizer, scheduler, train_loader, 
-                                  test_loader, device, args.post_epochs, args.verbose) 
+                                  test_loader, device, args.post_epochs, args.verbose, graph_name) 
     stop = timeit.default_timer()
     ## Display Results ##
     frames = [pre_result.head(1), pre_result.tail(1), post_result.head(1), post_result.tail(1)]
@@ -64,7 +72,8 @@ def run(args):
     total_flops = int((prune_result['sparsity'] * prune_result['flops']).sum())
     possible_flops = prune_result['flops'].sum()
     print("Train results:\n", train_result)
-    print("Prune results:\n", prune_result)
+    with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+        print("Prune results:\n", prune_result)
     print("Parameter Sparsity: {}/{} ({:.4f})".format(total_params, possible_params, total_params / possible_params))
     print("FLOP Sparsity: {}/{} ({:.4f})".format(total_flops, possible_flops, total_flops / possible_flops))
     print('Time: ', stop - start)
