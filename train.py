@@ -60,5 +60,3 @@ def train_eval_loop(model, loss, optimizer, scheduler, train_loader, test_loader
     writer.close()
     columns = ['train_loss', 'test_loss', 'top1_accuracy', 'top5_accuracy']
     return pd.DataFrame(rows, columns=columns)
-
-
